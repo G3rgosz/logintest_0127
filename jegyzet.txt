@@ -1,0 +1,38 @@
+git clone https://github.com/andteki/logintest.git
+git clone https://github.com/andteki/studal.git
+
+insomnia telepít
+
+cd studal/api/studal
+.env example -> .env (másolás mellé)
+
+db name: logintest
+user: logintest
+pass: titok
+
+
+adatbázis létehoz phpmyadminon
+utána:
+GRANT ALL PRIVILEGES
+ON logintest.* 
+TO logintest@localhost
+identified BY 'titok';
+
+composer install
+php artisan migrate
+php artisan key:generate
+
+(base64: nem titkosítás csak megjeleníthetővé teszi a nem megjeleníthető karaktereket)
+
+php artisan serve
+
+insomnia
+	logintest
+----------------
+logintest
+npm install
+ng serve -o
+ng generate component groups
+ng g guard shared/auth
+ng g s shared/apigroup 
+
